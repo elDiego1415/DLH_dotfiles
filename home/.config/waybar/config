@@ -114,7 +114,7 @@
       "headphone": "",
       "default": ["󰕿", "󰖀", "󰕾"]
     },
-    "tooltip-format": "Volumen: {volume}%",
+    "tooltip-format": false,
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "scroll-step": 2
   },

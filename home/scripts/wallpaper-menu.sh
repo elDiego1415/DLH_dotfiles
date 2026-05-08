@@ -65,7 +65,7 @@ wallpaper_for_thumb() {
             printf '%s' "$img"
             return
         fi
-    done < <(find "$WALL_DIR" -type f \( \
+    done < <(find -L "$WALL_DIR" -type f \( \
         -iname "*.jpg" -o \
         -iname "*.jpeg" -o \
         -iname "*.png" -o \
@@ -74,7 +74,7 @@ wallpaper_for_thumb() {
 }
 
 # Crear menú con miniaturas cacheadas
-CHOICE=$(find "$WALL_DIR" -type f \( \
+CHOICE=$(find -L "$WALL_DIR" -type f \( \
     -iname "*.jpg" -o \
     -iname "*.jpeg" -o \
     -iname "*.png" -o \

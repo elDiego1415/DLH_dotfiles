@@ -5,7 +5,7 @@ Configuracion personal para Hyprland, Waybar, Kitty, Zsh y herramientas de termi
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/topbar.png" alt="Hyprland top bar" width="900">
+    <img src="assets/screenshots/2026-05-08-125227_hyprshot.png>
 </p>
 
 <p align="center">

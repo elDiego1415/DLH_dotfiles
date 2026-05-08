@@ -1,2 +1,2 @@
-# DLH_dotfiles-
+# DLH_dotfiles
 My daily driver setup 

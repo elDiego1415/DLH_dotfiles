@@ -2,6 +2,17 @@
 
 Configuracion personal para Hyprland, Waybar, Kitty, Zsh y herramientas de terminal.
 
+## Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/topbar.png" alt="Hyprland top bar" width="900">
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/workspaces.png" alt="Workspaces" width="320">
+  <img src="assets/screenshots/status.png" alt="Status modules" width="560">
+</p>
+
 ## Estructura
 
 - `home/`: archivos que se enlazan directamente en `$HOME` con GNU Stow.

@@ -33,26 +33,6 @@ El instalador ejecuta:
 stow -d ~/dotfiles -t ~ home
 ```
 
-Si ya tienes archivos de configuracion en tu `$HOME`, Stow avisara del conflicto. Para adoptar esos archivos existentes dentro del repo y dejar enlaces simbolicos en su lugar, ejecuta:
-
-```bash
-./install.sh --adopt
-```
-
-Antes de adoptar puedes simular la operacion con:
-
-```bash
-stow -n -v --adopt -d ~/dotfiles -t ~ home
-```
-
-Una vez enlazado, editar `~/.config/waybar/config`, `~/.zshrc` o cualquier archivo gestionado modifica directamente el archivo correspondiente en `~/dotfiles/home`.
-
-Para quitar los enlaces sin borrar los archivos del repo:
-
-```bash
-stow -D -d ~/dotfiles -t ~ home
-```
-
 ## Incluye
 
 - Shell: `.zshrc`, `.bashrc`, `.bash_profile`, `.gitconfig`

@@ -9,8 +9,7 @@ Configuracion personal para Hyprland, Waybar, Kitty, Zsh y herramientas de termi
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/workspaces.png" alt="Workspaces" width="320">
-  <img src="assets/screenshots/status.png" alt="Status modules" width="560">
+     <img src="assets/screenshots/2026-05-08-125809_hyprshot.png">
 </p>
 
 ## Estructura

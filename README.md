@@ -25,17 +25,6 @@ stow -d ~/dotfiles -t ~ home
 
 Si algun archivo ya existe en tu `$HOME`, Stow avisara del conflicto. En ese caso, mueve el archivo antiguo o comparalo antes de volver a ejecutar el instalador.
 
-## Actualizar el repo
-
-Despues de cambiar una configuracion en tu sistema, copia el archivo actualizado al repo y revisa el diff:
-
-```bash
-cp ~/.config/waybar/config ~/dotfiles/home/.config/waybar/config
-cd ~/dotfiles
-git diff
-git status
-```
-
 ## Incluye
 
 - Shell: `.zshrc`, `.bashrc`, `.bash_profile`, `.gitconfig`

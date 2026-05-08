@@ -1,0 +1,91 @@
+/* ------------------ GENERAL ------------------ */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+window {
+    margin: 0px;
+    border: 1px solid rgba(203, 166, 247, 0.55);
+    border-radius: 8px;
+    background-color: rgba(30, 30, 46, 0.95);
+}
+
+/* ------------------ INPUT ------------------ */
+#input {
+    margin: 12px 12px 6px 12px;
+    border: 1px solid rgba(203, 166, 247, 0.28);
+    border-radius: 6px;
+    padding: 8px 10px;
+    background-color: rgba(49, 50, 68, 0.84);
+    color: #cdd6f4;
+    outline: none;
+    box-shadow: none;
+}
+
+/* ------------------ LISTA ------------------ */
+#inner-box {
+    margin: 6px 8px 8px 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+/* ------------------ SCROLL ------------------ */
+#scroll {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+overshoot,
+undershoot,
+overshoot.left,
+overshoot.right,
+undershoot.left,
+undershoot.right {
+    background: none;
+    background-image: none;
+    box-shadow: none;
+    border: none;
+}
+
+/* ------------------ ITEMS ------------------ */
+#entry {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+#entry:selected {
+    background-color: #cba6f7;
+    color: #1e1e2e;
+}
+
+#entry image {
+    margin: 0px;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 0px;
+}
+
+#text {
+    color: #cdd6f4;
+}
+
+#text:selected {
+    color: #1e1e2e;
+}
+
+#img {
+    margin: 0px;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 0px;
+}

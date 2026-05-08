@@ -1,0 +1,142 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 31,
+  "spacing": 0,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "mpris",
+    "tray",
+    "network",
+    "wireplumber",
+    "custom/mic",
+    "battery"
+  ],
+
+  "custom/logo": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "fastfetch"
+  },
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "format-icons": {
+      "1": "󰈹",
+      "2": "󰨞",
+      "3": "󱁤",
+      "4": "",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "urgent": "󰗖",
+      "default": "•"
+    }
+  },
+
+  "clock": {
+    "interval": 60,
+    "format": " {:%H:%M}",
+    "format-alt": " {:%a %d %b}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "󰏤 {title}",
+    "format-stopped": "",
+    "player-icons": {
+      "default": "󰝚",
+      "firefox": "󰈹",
+      "zen": "󰈹",
+      "chromium": "󰝚",
+      "spotify": ""
+    },
+    "status-icons": {
+      "paused": "󰏤"
+    },
+    "max-length": 32,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "tooltip-format": "{player}: {artist} - {title}"
+  },
+
+  "tray": {
+    "icon-size": 13,
+    "spacing": 6,
+    "icons": {
+      "blueman": "/usr/share/icons/hicolor/16x16/status/blueman-active.png"
+    }
+  },
+
+
+
+  "network": {
+    "interval": 8,
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format-wifi": "{icon} {essid}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "󰈀 {ifname}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Sin conexion",
+    "on-click":"nm-connection-editor"
+  },
+
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": "",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "tooltip-format": "Volumen: {volume}%",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "scroll-step": 2
+  },
+
+  "custom/mic": {
+    "exec": "bash -c 'OUT=$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@ 2>/dev/null); if echo \"$OUT\" | grep -q MUTED; then echo \"󰍭\"; else VOL=$(echo \"$OUT\" | grep -oE \"[0-9.]+\" | head -n1); awk -v v=\"$VOL\" \"BEGIN { printf \\\"󰍬 %d%%\\\", v * 100 }\"; fi'",
+    "interval": 5,
+    "format": "{}",
+    "tooltip": false,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+  },
+
+  "battery": {
+    "interval": 10,
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-full": "{capacity}% 󰁹",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "tooltip-format": "{timeTo} - {capacity}%"
+  }
+}

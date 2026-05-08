@@ -1,0 +1,20 @@
+classic: false
+
+color:
+  when: auto
+  theme: custom
+
+icons:
+  when: auto
+  theme: fancy
+  separator: " "
+
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: first
+
+date: relative
+size: short
+permission: rwx
+hyperlink: auto

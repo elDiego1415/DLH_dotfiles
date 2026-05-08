@@ -1,0 +1,143 @@
+[app]
+overall = { bg = "#1e1e2e" }
+
+[mgr]
+cwd = { fg = "#cba6f7", bold = true }
+find_keyword = { fg = "#1e1e2e", bg = "#f9e2af", bold = true }
+find_position = { fg = "#fab387", bold = true }
+symlink_target = { fg = "#89b4fa", italic = true }
+marker_copied = { fg = "#a6e3a1", bg = "#1e1e2e", bold = true }
+marker_cut = { fg = "#f38ba8", bg = "#1e1e2e", bold = true }
+marker_marked = { fg = "#94e2d5", bg = "#313244", bold = true }
+marker_selected = { fg = "#cba6f7", bg = "#313244", bold = true }
+count_copied = { fg = "#a6e3a1", bold = true }
+count_cut = { fg = "#f38ba8", bold = true }
+count_selected = { fg = "#cba6f7", bold = true }
+border_symbol = "│"
+border_style = { fg = "#6c7086" }
+
+[indicator]
+parent = { fg = "#9399b2" }
+current = { fg = "#1e1e2e", bg = "#cba6f7", bold = true }
+preview = { fg = "#1e1e2e", bg = "#89b4fa", bold = true }
+padding = { open = "█", close = "█" }
+
+[tabs]
+active = { fg = "#1e1e2e", bg = "#cdd6f4", bold = true }
+inactive = { fg = "#a6adc8", bg = "#181825" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#1e1e2e", bg = "#cdd6f4", bold = true }
+normal_alt = { fg = "#cdd6f4", bg = "#313244" }
+select_main = { fg = "#1e1e2e", bg = "#cba6f7", bold = true }
+select_alt = { fg = "#cba6f7", bg = "#313244" }
+unset_main = { fg = "#1e1e2e", bg = "#f38ba8", bold = true }
+unset_alt = { fg = "#f38ba8", bg = "#313244" }
+
+[status]
+overall = { fg = "#cdd6f4", bg = "#181825" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_type = { fg = "#cba6f7" }
+perm_read = { fg = "#a6e3a1" }
+perm_write = { fg = "#f9e2af" }
+perm_exec = { fg = "#f38ba8" }
+perm_sep = { fg = "#9399b2" }
+progress_label = { fg = "#cdd6f4", bold = true }
+progress_normal = { fg = "#94e2d5", bg = "#313244" }
+progress_error = { fg = "#f38ba8", bg = "#313244" }
+
+[which]
+cols = 3
+mask = { bg = "#181825" }
+cand = { fg = "#94e2d5", bold = true }
+rest = { fg = "#a6adc8" }
+desc = { fg = "#cdd6f4" }
+separator = "  "
+separator_style = { fg = "#9399b2" }
+
+[confirm]
+border = { fg = "#cba6f7" }
+title = { fg = "#cba6f7", bold = true }
+body = { fg = "#cdd6f4" }
+list = { fg = "#a6adc8" }
+btn_yes = { fg = "#1e1e2e", bg = "#f38ba8", bold = true }
+btn_no = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
+btn_labels = [ " Si ", " No " ]
+
+[spot]
+border = { fg = "#89b4fa" }
+title = { fg = "#89b4fa", bold = true }
+tbl_col = { fg = "#cba6f7" }
+tbl_cell = { fg = "#cdd6f4" }
+
+[notify]
+title_info = { fg = "#94e2d5", bold = true }
+title_warn = { fg = "#f9e2af", bold = true }
+title_error = { fg = "#f38ba8", bold = true }
+
+[pick]
+border = { fg = "#cba6f7" }
+active = { fg = "#1e1e2e", bg = "#cba6f7", bold = true }
+inactive = { fg = "#cdd6f4" }
+
+[input]
+border = { fg = "#cba6f7" }
+title = { fg = "#cba6f7", bold = true }
+value = { fg = "#cdd6f4" }
+selected = { fg = "#1e1e2e", bg = "#94e2d5" }
+
+[cmp]
+border = { fg = "#89b4fa" }
+active = { fg = "#1e1e2e", bg = "#89b4fa", bold = true }
+inactive = { fg = "#cdd6f4" }
+icon_file = "󰈔"
+icon_folder = "󰉋"
+icon_command = ""
+
+[tasks]
+border = { fg = "#fab387" }
+title = { fg = "#fab387", bold = true }
+hovered = { fg = "#1e1e2e", bg = "#fab387", bold = true }
+
+[help]
+on = { fg = "#94e2d5", bold = true }
+run = { fg = "#cba6f7" }
+desc = { fg = "#cdd6f4" }
+hovered = { fg = "#1e1e2e", bg = "#cdd6f4", bold = true }
+footer = { fg = "#a6adc8", bg = "#181825" }
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#94e2d5" },
+  { mime = "{audio,video}/*", fg = "#cba6f7" },
+  { mime = "application/{zip,tar,gzip,xz,bzip2,7z,rar}", fg = "#fab387" },
+  { mime = "application/pdf", fg = "#f38ba8" },
+  { mime = "inode/empty", fg = "#9399b2" },
+  { url = "*", is = "exec", fg = "#a6e3a1" },
+  { url = "*", is = "orphan", fg = "#f38ba8", crossed = true },
+  { url = "*", is = "link", fg = "#89b4fa" },
+  { url = "*/", fg = "#89b4fa", bold = true },
+]
+
+[icon]
+prepend_dirs = [
+  { name = "capturas", text = "󰄀", fg = "#94e2d5" },
+  { name = "fondos", text = "󰸉", fg = "#cba6f7" },
+  { name = "Downloads", text = "󰇚", fg = "#89b4fa" },
+  { name = "proyecto", text = "󰲋", fg = "#fab387" },
+  { name = "notas", text = "󰎞", fg = "#f9e2af" },
+]
+prepend_files = [
+  { name = ".zshrc", text = "", fg = "#a6e3a1" },
+  { name = "hyprland.conf", text = "", fg = "#cba6f7" },
+]
+prepend_conds = [
+  { if = "hidden & dir", text = "󱞞", fg = "#cdd6f4" },
+  { if = "hidden", text = "󰘓", fg = "#bac2de" },
+]

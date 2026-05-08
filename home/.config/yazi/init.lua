@@ -1,0 +1,1 @@
+-- Keep the file intentionally small; the TOML files carry the user-facing setup.

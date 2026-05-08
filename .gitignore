@@ -1,0 +1,25 @@
+*.bak
+*.backup
+*.log
+*.old
+*.orig
+*.pyc
+*.save
+*~
+
+.DS_Store
+.cache/
+.Trash-*/
+__pycache__/
+
+# Runtime/state files that should stay local.
+home/.config/hypr/current-wallpaper
+home/.config/cava/config.save
+
+# Private machine/user data. Add files here before committing if needed.
+home/.ssh/
+home/.gnupg/
+home/.local/share/
+home/.config/chromium/
+home/.config/mozilla/
+home/.config/zen/

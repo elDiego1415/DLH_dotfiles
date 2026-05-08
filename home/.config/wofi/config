@@ -1,0 +1,11 @@
+width=380
+height=420
+location=center
+show=drun
+prompt=Buscar
+allow_images=false
+image_size=0
+insensitive=true
+matching=multi-contains
+parse_search=true
+hide_scroll=true

@@ -1,0 +1,19 @@
+[mgr]
+prepend_keymap = [
+  { on = [ "g", "c" ], run = "cd ~/.config", desc = "Ir a ~/.config" },
+  { on = [ "g", "d" ], run = "cd ~/Downloads", desc = "Ir a Downloads" },
+  { on = [ "g", "f" ], run = "cd ~/fondos", desc = "Ir a fondos" },
+  { on = [ "g", "p" ], run = "cd ~/proyecto", desc = "Ir a proyecto" },
+  { on = [ "g", "n" ], run = "cd ~/notas", desc = "Ir a notas" },
+  { on = [ "g", "s" ], run = "cd ~/scripts", desc = "Ir a scripts" },
+  { on = "!", run = "shell --interactive --block", desc = "Shell bloqueante" },
+  { on = "<C-o>", run = "open --interactive", desc = "Abrir con..." },
+  { on = "<C-r>", run = "refresh", desc = "Refrescar" },
+  { on = "<C-s>", run = "search rg", desc = "Buscar contenido con ripgrep" },
+]
+
+[input]
+prepend_keymap = [
+  { on = "<Esc>", run = "close", desc = "Cancelar" },
+]
+

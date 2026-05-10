@@ -17,9 +17,6 @@ while true; do
         if [[ "$CAPACITY" -le "$CRITICAL" && "$WARNED_CRITICAL" -eq 0 ]]; then
             notify-send -u critical "BATERIA CRITICA" "${CAPACITY}% - Conecta el cargador YA"
 
-            # sonido (opcional)
-            paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga &
-
             WARNED_CRITICAL=1
         elif [[ "$CAPACITY" -le "$LOW" && "$WARNED_LOW" -eq 0 ]]; then
             notify-send "Bateria baja" "Quedan ${CAPACITY}%"

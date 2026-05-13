@@ -20,7 +20,7 @@ markup=1
 actions=1
 
 # ------------------ BEHAVIOR ----------------
-default-timeout=4000
+default-timeout=2500
 ignore-timeout=0
 max-visible=5
 max-history=20

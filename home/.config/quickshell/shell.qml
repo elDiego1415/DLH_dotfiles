@@ -764,7 +764,7 @@ PanelWindow {
                     anchors.fill: parent
                     hoverEnabled: true
                     onClicked: {
-                        logoProc.command = ["bash", "-lc", "fastfetch >/dev/null 2>&1 &"]
+                        logoProc.command = ["bash", "-lc", "notify-send 'Quickshell' 'Has pulsado el logo' >/dev/null 2>&1 &"]
                         logoProc.running = true
                     }
                 }

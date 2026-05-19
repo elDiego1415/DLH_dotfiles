@@ -16,6 +16,13 @@ return function(ctx)
   })
 
   ctx.hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
+  ctx.hl.gesture({
+    fingers = 4,
+    direction = "down",
+    action = function()
+      ctx.hl.exec_cmd("~/scripts/hyprlock-current-wallpaper.sh")
+    end,
+  })
 
   ctx.hl.device({
     name = "epic-mouse-v1",

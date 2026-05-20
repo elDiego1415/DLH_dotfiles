@@ -1,0 +1,13 @@
+electron41-bin-debug
+localsend-bin
+pacman-fix-permissions
+python-imageio-ffmpeg
+python-screeninfo
+spotify
+system-age
+system-age-debug
+vesktop-bin
+waypaper
+yay
+yay-debug
+zen-browser-bin

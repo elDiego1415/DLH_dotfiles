@@ -39,3 +39,7 @@ stow -d ~/dotfiles -t ~ home
 - Entorno grafico: `hypr`, `waybar`, `mako`, `wofi`, `gtk-3.0`, `xsettingsd`
 - Terminal y CLI: `kitty`, `nvim`, `btop`, `fastfetch`, `yazi`, `lsd`, `lazygit`, `cava`
 - Otros: `quickshell`, `waypaper`, `mpv`, scripts personales
+
+## Restauracion
+
+Consulta `RESTORE.md` para reinstalar paquetes y volver a enlazar la configuracion.

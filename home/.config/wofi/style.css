@@ -1,44 +1,41 @@
-/* ------------------ GENERAL ------------------ */
 * {
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 12px;
+    font-size: 13px;
 }
 
 window {
-    margin: 0px;
-    border: 1px solid rgba(203, 166, 247, 0.55);
-    border-radius: 8px;
-    background-color: rgba(30, 30, 46, 0.95);
+    margin: 0;
+    border: 2px solid rgba(203, 166, 247, 0.72);
+    border-radius: 15px;
+    background:
+        linear-gradient(135deg, rgba(49, 36, 84, 0.98), rgba(24, 18, 43, 0.98));
+    box-shadow:
+        0 0 0 1px rgba(245, 194, 231, 0.10),
+        0 18px 48px rgba(0, 0, 0, 0.42),
+        0 0 34px rgba(203, 166, 247, 0.22);
 }
 
-/* ------------------ INPUT ------------------ */
+#outer-box {
+    margin: 0;
+    padding: 14px;
+    background-color: transparent;
+}
+
 #input {
-    margin: 12px 12px 6px 12px;
-    border: 1px solid rgba(203, 166, 247, 0.28);
-    border-radius: 6px;
-    padding: 8px 10px;
-    background-color: rgba(49, 50, 68, 0.84);
-    color: #cdd6f4;
+    min-height: 38px;
+    margin: 0 0 10px 0;
+    padding: 0 13px;
+    border: 1px solid rgba(245, 194, 231, 0.18);
+    border-radius: 11px;
+    background-color: rgba(24, 24, 37, 0.80);
+    color: #f5e0ff;
     outline: none;
     box-shadow: none;
 }
 
-/* ------------------ LISTA ------------------ */
-#inner-box {
-    margin: 6px 8px 8px 8px;
-    border: none;
-    background-color: transparent;
-}
-
-#outer-box {
-    margin: 0px;
-    border: none;
-    background-color: transparent;
-}
-
-/* ------------------ SCROLL ------------------ */
+#inner-box,
 #scroll {
-    margin: 0px;
+    margin: 0;
     border: none;
     background-color: transparent;
 }
@@ -55,17 +52,19 @@ undershoot.right {
     border: none;
 }
 
-/* ------------------ ITEMS ------------------ */
 #entry {
+    margin: 3px 0;
     padding: 6px 10px;
-    border-radius: 6px;
-    background-color: transparent;
-    color: #cdd6f4;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 46, 0.34);
+    color: #e7d7ff;
 }
 
 #entry:selected {
-    background-color: #cba6f7;
-    color: #1e1e2e;
+    background:
+        linear-gradient(90deg, rgba(203, 166, 247, 0.96), rgba(245, 194, 231, 0.86));
+    color: #1e102f;
+    box-shadow: none;
 }
 
 #entry image {
@@ -76,11 +75,11 @@ undershoot.right {
 }
 
 #text {
-    color: #cdd6f4;
+    color: #e7d7ff;
 }
 
 #text:selected {
-    color: #1e1e2e;
+    color: #1e102f;
 }
 
 #img {

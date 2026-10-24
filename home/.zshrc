@@ -1,9 +1,15 @@
 # Created by newuser for 5.9
-fastfetch
-eval "$(starship init zsh)"
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
+if command -v starship >/dev/null 2>&1; then
+    eval "$(starship init zsh)"
+fi
 
-autoload -Uz compinit 
-compinit
+autoload -Uz compinit
+zcompdump_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+mkdir -p "$zcompdump_dir"
+compinit -d "$zcompdump_dir/zcompdump-${ZSH_VERSION}"
 
 alias ls='lsd'
 alias ll='lsd -la'
@@ -12,8 +18,12 @@ export PATH="$HOME/.npm-global/bin:$HOME/scripts:$PATH"
 export LS_COLORS='di=38;5;147:ln=38;5;183:ex=38;5;174:fi=38;5;189:*.sh=38;5;183:*.md=38;5;183:*.txt=38;5;189:*.toml=38;5;147:*.yaml=38;5;147:*.yml=38;5;147:*.json=38;5;147:*.conf=38;5;147:*.ini=38;5;147:*.css=38;5;183:*.js=38;5;187:*.ts=38;5;187:*.py=38;5;151:*.rs=38;5;174:*.png=38;5;219:*.jpg=38;5;219:*.jpeg=38;5;219:*.webp=38;5;219:*.mp3=38;5;183:*.flac=38;5;183:*.mp4=38;5;183:*.mkv=38;5;183:*.zip=38;5;174:*.tar=38;5;174:*.gz=38;5;174'
 
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+if [[ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 
 # Comandos válidos → verde
@@ -25,12 +35,12 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
 
 function yy() {
     local tmp cwd
-    tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    tmp="$(mktemp -t "yazi-cwd.XXXXX")" || return
     yazi "$@" --cwd-file="$tmp"
     if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
         cd -- "$cwd"
     fi
-    rm -f -- "$tmp"
+    command rm -f -- "$tmp"
 }
 
 function ya() {

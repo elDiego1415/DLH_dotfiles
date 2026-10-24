@@ -12,7 +12,7 @@ return function(ctx)
     { "R", h.exec(programs.menu) },
     { "P", dsp.window.pseudo() },
     { "J", dsp.layout("togglesplit") },
-    { "SPACE", h.exec("menu-ia") },
+    { "SPACE", h.exec("~/scripts/menu-ia.sh") },
     { "SHIFT + S", h.exec("hyprshot -m region") },
     { "L", h.exec("~/scripts/hyprlock-current-wallpaper.sh") },
     { "S", h.exec("hyprshot -m output") },

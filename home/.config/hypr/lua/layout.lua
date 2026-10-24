@@ -7,6 +7,7 @@ return function(ctx)
       new_status = "master",
       new_on_top = true,
       mfact = 0.65,
+      focus_master_on_close = true,
     },
     misc = {
       force_default_wallpaper = 0,

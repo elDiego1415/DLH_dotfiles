@@ -1,14 +1,4 @@
 gui:
-  authorColors:
-    "*": "#cba6f7"
-  branchColors:
-    main: "#a6e3a1"
-    master: "#a6e3a1"
-    develop: "#89b4fa"
-  branchColorPatterns:
-    "feature/.+": "#94e2d5"
-    "fix/.+": "#f38ba8"
-    "hotfix/.+": "#fab387"
   nerdFontsVersion: "3"
   border: rounded
   showFileTree: true
@@ -44,3 +34,9 @@ gui:
       - "#f38ba8"
     defaultFgColor:
       - "#cdd6f4"
+    authorColors:
+      "*": "#cba6f7"
+    branchColorPatterns:
+      "feature/.+": "#94e2d5"
+      "fix/.+": "#f38ba8"
+      "hotfix/.+": "#fab387"

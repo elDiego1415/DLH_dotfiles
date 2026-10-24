@@ -30,8 +30,11 @@ cd ~/dotfiles
 El instalador ejecuta:
 
 ```bash
-stow -d ~/dotfiles -t ~ home
+./install.sh --check  # simula los enlaces y detecta conflictos sin modificar archivos
+./install.sh         # crea los enlaces
 ```
+
+También admite `./install.sh --adopt` para adoptar archivos existentes. Esta opción puede modificar el repositorio y muestra un aviso antes de continuar; revisa antes los conflictos con `--check`. `--check` y `--adopt` no se pueden combinar. El instalador solo enlaza la configuración; no instala paquetes. Consulta `RESTORE.md` para el proceso completo.
 
 ## Incluye
 

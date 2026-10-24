@@ -23,12 +23,17 @@ yay -S --needed - < packages/aur.txt
 Después enlaza la configuración:
 
 ```bash
+./install.sh --check
 ./install.sh
 ```
 
-`install.sh` enlaza `home/` en `$HOME` usando GNU Stow. Sin argumentos, Stow se detiene si encuentra archivos que entrarían en conflicto. Inspecciona esos conflictos antes de resolverlos.
+`./install.sh --check` comprueba que existe `home/`, que `$HOME` permite escritura y que GNU Stow está instalado. Luego ejecuta Stow en modo simulación y muestra los enlaces que intentaría crear. No modifica archivos. Si aparecen conflictos, resuélvelos y vuelve a ejecutar la comprobación antes de instalar.
 
-`./install.sh --adopt` permite que Stow adopte archivos existentes y puede modificar archivos del repositorio. Úsalo solo después de revisar los conflictos y tener claro qué archivos quieres conservar; no es un modo de previsualización.
+`./install.sh` crea los enlaces. Si Stow encuentra conflictos, se detiene sin reemplazar los archivos existentes.
+
+`./install.sh --adopt` pide a Stow que adopte archivos existentes en el repositorio y puede moverlos o modificar el contenido del repositorio. El instalador muestra un aviso, pero continúa sin pedir confirmación. Revisa primero los conflictos con `--check` y usa `--adopt` solo si quieres conservar esos archivos en los dotfiles.
+
+Las opciones `--check` y `--adopt` no se pueden combinar. El instalador no instala paquetes: eso se hace en los pasos anteriores.
 
 ## Paquetes
 

@@ -1,0 +1,57 @@
+(defvar sp500_chart "/home/diego/.config/eww/chart-placeholder.svg")
+(defpoll sp500 :interval "60s" "python3 ~/.config/eww/scripts/sp500.py")
+(defpoll profile_name :interval "3600s" "id -un")
+(defpoll profile_avatar :interval "3600s" "python3 ~/.config/eww/scripts/profile_avatar.py")
+(defpoll disk_percent :interval "30s" "python3 ~/.config/eww/scripts/disk_usage.py percent")
+(defpoll disk_label :interval "30s" "python3 ~/.config/eww/scripts/disk_usage.py label")
+
+(defwindow profile
+  :monitor 0
+  :geometry (geometry
+    :x "24px"
+    :y "48px"
+    :width "240px"
+    :height "88px"
+    :anchor "top left")
+  :stacking "fg"
+  :focusable false
+  (box :class "profile-card" :orientation "h" :space-evenly false :halign "start" :valign "center"
+    (image :class "profile-avatar" :path profile_avatar :preserve-aspect-ratio true)
+    (box :class "profile-copy" :orientation "v" :space-evenly false :valign "center"
+      (label :class "profile-eyebrow" :text "SESIÓN")
+      (label :class "profile-name" :text profile_name))))
+
+(defwindow disk_usage
+  :monitor 0
+  :geometry (geometry
+    :x "24px"
+    :y "220px"
+    :width "240px"
+    :height "78px"
+    :anchor "top left")
+  :stacking "fg"
+  :focusable false
+  (box :class "disk-card" :orientation "v" :space-evenly false
+    (box :class "disk-heading" :orientation "h" :space-evenly false
+      (label :class "disk-title" :text "DISCO · /")
+      (label :class "disk-percent" :text {disk_percent + "%"}))
+    (progress :class "disk-progress" :value {disk_percent} :orientation "h")
+    (label :class "disk-label" :text disk_label)))
+
+(defwindow sp500
+  :monitor 0
+  :geometry (geometry
+    :x "24px"
+    :y "48px"
+    :width "220px"
+    :height "126px"
+    :anchor "top right")
+  :stacking "fg"
+  :focusable false
+  (box :class "card" :orientation "v" :space-evenly false
+    (box :class "heading" :orientation "h" :space-evenly false
+      (label :class "dot" :text "●")
+      (label :class "name" :text "S&P 500")
+      (label :class "symbol" :text "INDEX · USD"))
+    (label :class "quote" :text sp500)
+    (image :class "chart" :path sp500_chart :preserve-aspect-ratio true)))

@@ -1,0 +1,124 @@
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+.card {
+  min-width: 220px;
+  min-height: 126px;
+  padding: 8px 10px;
+  border: 1px solid rgba(205, 214, 244, 0.14);
+  border-radius: 12px;
+  background: rgba(24, 24, 37, 0.96);
+  color: #cdd6f4;
+}
+
+.heading {
+  margin-bottom: 6px;
+}
+
+.dot {
+  margin-right: 8px;
+  color: #a6e3a1;
+  font-size: 9px;
+}
+
+.name {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.symbol {
+  color: #7f849c;
+  font-size: 9px;
+}
+
+.quote {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.chart {
+  min-width: 196px;
+  min-height: 48px;
+}
+
+.profile-card {
+  min-width: 240px;
+  min-height: 88px;
+  padding: 10px 14px;
+  border: 1px solid rgba(205, 214, 244, 0.14);
+  border-radius: 14px;
+  background: rgba(24, 24, 37, 0.96);
+  color: #cdd6f4;
+}
+
+.profile-avatar {
+  min-width: 56px;
+  min-height: 56px;
+  margin-right: 14px;
+  border: 2px solid #cba6f7;
+  border-radius: 50%;
+}
+
+.profile-copy {
+  min-width: 0;
+}
+
+.profile-eyebrow {
+  margin-bottom: 4px;
+  color: #a6adc8;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.profile-name {
+  color: #cdd6f4;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.disk-card {
+  min-width: 240px;
+  min-height: 78px;
+  padding: 10px 14px;
+  border: 1px solid rgba(205, 214, 244, 0.14);
+  border-radius: 14px;
+  background: rgba(24, 24, 37, 0.96);
+  color: #cdd6f4;
+}
+
+.disk-heading {
+  margin-bottom: 8px;
+}
+
+.disk-title {
+  color: #a6adc8;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.disk-percent {
+  color: #cba6f7;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.disk-progress trough {
+  min-height: 8px;
+  border-radius: 99px;
+  background: #45475a;
+}
+
+.disk-progress progress {
+  min-height: 8px;
+  border-radius: 99px;
+  background: #cba6f7;
+}
+
+.disk-label {
+  margin-top: 6px;
+  color: #a6adc8;
+  font-size: 9px;
+}

@@ -9,6 +9,7 @@ return function(ctx)
       "/usr/lib/polkit-kde-authentication-agent-1",
       "mako",
       "/home/diego/scripts/aviso-bateria.sh",
+      "python3 /home/diego/.config/eww/scripts/desktop_visibility.py",
     }, ctx.hl.exec_cmd)
   end)
 end

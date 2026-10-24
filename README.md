@@ -39,9 +39,14 @@ También admite `./install.sh --adopt` para adoptar archivos existentes. Esta op
 ## Incluye
 
 - Shell: `.zshrc`, `.bashrc`, `.bash_profile`, `.gitconfig`
-- Entorno grafico: `hypr`, `waybar`, `mako`, `wofi`, `gtk-3.0`, `xsettingsd`
+- Entorno grafico: `hypr`, `waybar`, `eww`, `mako`, `wofi`, `gtk-3.0`, `xsettingsd`
 - Terminal y CLI: `kitty`, `nvim`, `btop`, `fastfetch`, `yazi`, `lsd`, `lazygit`, `cava`
 - Otros: `quickshell`, `waypaper`, `mpv`, scripts personales
+
+Eww se instala desde AUR con la lista de `packages/aur.txt`. Al iniciar Hyprland,
+el listener de Eww arranca el daemon y muestra los widgets de perfil, disco y
+S&P 500 cuando el escritorio activo queda vacío. La foto de perfil es opcional:
+se detectan `~/.face` y `~/.face.icon`, con un avatar genérico como alternativa.
 
 ## Restauracion
 

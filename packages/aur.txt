@@ -1,4 +1,5 @@
 electron41-bin-debug
+eww
 localsend-bin
 pacman-fix-permissions
 python-imageio-ffmpeg

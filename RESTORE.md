@@ -54,6 +54,8 @@ En el momento de crear este backup no había Flatpaks instalados. Esa nota es hi
 ## Dependencias del entorno
 
 - Hyprland inicia Waybar, Hyprpaper, Blueman, el agente de autenticación de Polkit, Mako y el script `aviso-bateria.sh`.
+- Eww se instala desde AUR mediante `packages/aur.txt`. El inicio de Hyprland ejecuta el listener, que arranca el daemon de Eww y abre los widgets de perfil, uso de disco y S&P 500 cuando el escritorio activo está vacío. En escritorios con ventanas, los widgets se cierran.
+- La foto del perfil se busca en `~/.face` o `~/.face.icon`; si no existe, Eww usa el avatar SVG incluido en los dotfiles.
 - Los comandos `playerctl`, `wpctl` y `nm-connection-editor` se usan desde controles de Waybar o atajos. `wpctl` lo proporciona WirePlumber y `nm-connection-editor` NetworkManager Applet. `playerctl` debe estar instalado para que funcionen los controles multimedia.
 - Los plugins de Zsh se cargan desde las rutas de Arch bajo `/usr/share/zsh/plugins/`; el shell ahora omite cada plugin si su archivo no está instalado.
 - Tras reinstalar, comprueba que los servicios que uses estén habilitados, por ejemplo NetworkManager, Bluetooth, impresión o Timeshift. La lista de paquetes instala software, pero no restaura automáticamente el estado de los servicios ni sus datos.
